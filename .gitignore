@@ -1,2 +1,8 @@
 usuarios/secrets.json
 userdj
+__pycache__/
+db.sqlite3
+.venv/
+*.pyc
+.env
+
