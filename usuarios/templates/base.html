@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Titulo de la pagina -->
+    <title>{% block title %} UsuariosDj {% endblock %}</title>
+
+    <!-- Estilos adicionales -->
+    {% block extra_head %}
+    <div class="container" style="text-align: center; margin-top: 10px; background-color: #0904ffff; color: white;" >
+        <h1>Curso de Django Udemy</h1>
+    </div>
+
+    {% endblock %}
+
+</head>
+
+<body>
+    <nav class="navbar is-primary" role="navigation" aria-label="main navigation" style="text-align: center; margin-top: 10px;">
+        <div class="navbar-brand" style="justify-content: center;">
+            <a class="navbar-item" href="{% url 'home:home' %}">
+                Home
+            </a>
+        </div>
+    </nav>
+
+    <section class="section">
+        <div class="container" style="text-align: center; margin-top: 10px;">
+            {% block content %}
+
+            {% endblock %}
+        </div>
+    </section>
+</body>
+
+<footer>
+    <div class="container" style="text-align: center; margin-top: 10px; background-color: #0904ffff; color: white;" >
+        <p>&copy; 2026 UsuariosDj. Todos los derechos reservados. Adolfo Antequera</p>
+    </div>
+</footer>
+</html>

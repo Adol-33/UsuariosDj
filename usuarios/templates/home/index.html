@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %} Inicio {% endblock %}
+
+{% block content %}
+
+    {% if user.is_authenticated %}
+        <h2>Bienvenido, {{ user.username|title }}</h2>
+        <a href="{% url 'users:logout' %}">Cerrar Sesión</a>
+    {% else %}
+        <h2>Bienvenido a UsuariosDj</h2>
+        <ul style="list-style-type: none;">
+            <li><a href="{% url 'users:login' %}">inicia sesión</a></li>
+            <li><a href="{% url 'users:register' %}">regístrate</a></li>
+        </ul>
+    {% endif %}
+
+{% endblock %}
+
+
+

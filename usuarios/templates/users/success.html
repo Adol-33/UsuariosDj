@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block title %} Registro Exitoso {% endblock %}
+
+{% block content %}
+    <h1 class="title">¡Registro Exitoso!</h1>
+    <p>Tu cuenta ha sido creada exitosamente.</p>
+    <a class="button is-primary" href="{% url 'users:register' %}">volver</a>
+{% endblock %}
