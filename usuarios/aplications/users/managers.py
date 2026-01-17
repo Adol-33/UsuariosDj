@@ -44,6 +44,7 @@ class UserManager(BaseUserManager, models.Manager):
             password=password, # Asignar la contraseña
             is_staff=True, # Es staff
             is_superuser=True, # Es superusuario
+            is_active=True, # Está activo
             **extra_fields) # Asignar campos extra
 
     def listar_usuarios(self):
