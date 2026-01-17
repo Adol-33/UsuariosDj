@@ -4,6 +4,7 @@
 from django.views.generic import TemplateView
 # Create your views here.
 
+
 class HomePageView(TemplateView):
     """ Vista para la pagina de inicio """
 

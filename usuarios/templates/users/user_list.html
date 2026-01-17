@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %} Lista de Usuarios {% endblock %}
+
+{% block content %}
+
+    <h2>Lista de Usuarios</h2>
+    <ul style="list-style-type: none; padding: 0;">
+        {% for usuario in object_list %}
+            <li>{{ usuario.username|title }} - {{ usuario.email }} </li>
+        {% empty %}
+            <li>No hay usuarios registrados.</li>
+        {% endfor %}
+    </ul>
+
+{% endblock %}
+

@@ -17,7 +17,8 @@ class User(AbstractUser, PermissionsMixin):
     nombres = models.CharField('First Names', max_length=100, blank=True)
     apellidos = models.CharField('Last Names', max_length=100, blank=True)
     genero = models.CharField('Genero', max_length=1, choices=(genero_choice), blank=True)
-
+    codigo_verificador = models.CharField('Codigo Verificador', max_length=6, blank=True)
+    is_active = models.BooleanField('Activo', default=False)
 
     USERNAME_FIELD = 'username'
     REQUIRED_FIELDS = ['email']

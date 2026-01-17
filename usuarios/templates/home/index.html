@@ -6,12 +6,16 @@
 
     {% if user.is_authenticated %}
         <h2>Bienvenido, {{ user.username|title }}</h2>
-        <a href="{% url 'users:logout' %}">Cerrar Sesión</a>
+        <ul style="list-style-type: none;">
+            <li><a href="{% url 'users:logout' %}">Cerrar Sesión</a></li>
+            <li><a href="{% url 'users:user-list' %}">Ver Lista de Usuarios</a></li>
+            <li><a href="{% url 'users:update-password' %}">Actualizar Contraseña</a></li>
+        </ul>
     {% else %}
         <h2>Bienvenido a UsuariosDj</h2>
         <ul style="list-style-type: none;">
-            <li><a href="{% url 'users:login' %}">inicia sesión</a></li>
-            <li><a href="{% url 'users:register' %}">regístrate</a></li>
+            <li><a href="{% url 'users:login' %}">Inicia sesión</a></li>
+            <li><a href="{% url 'users:register' %}">Regístrate</a></li>
         </ul>
     {% endif %}
 

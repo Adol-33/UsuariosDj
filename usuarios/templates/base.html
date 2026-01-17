@@ -8,15 +8,25 @@
 
     <!-- Estilos adicionales -->
     {% block extra_head %}
-    <div class="container" style="text-align: center; margin-top: 10px; background-color: #0904ffff; color: white;" >
-        <h1>Curso de Django Udemy</h1>
-    </div>
-
     {% endblock %}
+    
+    <style>
+        .errorlist {
+            color: #ff3860; /* Color rojo (similar a Bulma danger) */
+            font-weight: bold;
+            font-size: 0.9rem;
+            list-style-type: none; /* Quita los puntos de la lista */
+            margin-bottom: 10px;
+        }
+    </style>
 
 </head>
 
 <body>
+    <div class="container" style="text-align: center; margin-top: 10px; background-color: #0904ffff; color: white;" >
+        <h1>Curso de Django Udemy</h1>
+        <div class="fecha" style="font-size: 14px; color: white;">{{ fecha }}</div>
+    </div>
     <nav class="navbar is-primary" role="navigation" aria-label="main navigation" style="text-align: center; margin-top: 10px;">
         <div class="navbar-brand" style="justify-content: center;">
             <a class="navbar-item" href="{% url 'home:home' %}">
